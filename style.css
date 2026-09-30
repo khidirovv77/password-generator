@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eaeaea;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: #1e2749;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.password-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#password {
+    flex: 1;
+    padding: 14px;
+    font-size: 18px;
+    font-family: "Consolas", monospace;
+    background: #0f1729;
+    color: #4ade80;
+    border: 2px solid #2a3a5c;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#copyBtn {
+    padding: 0 16px;
+    font-size: 20px;
+    background: #2a3a5c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#copyBtn:hover {
+    background: #3a4a7c;
+}
+
+.strength-bar {
+    height: 6px;
+    background: #0f1729;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+#strengthFill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s, background 0.3s;
+}
+
+#strengthText {
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.settings > label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+#length {
+    width: 100%;
+    margin-top: 8px;
+    accent-color: #4ade80;
+}
+
+#lengthValue {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+.checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: #b0b8d0;
+}
+
+.checkboxes input[type="checkbox"] {
+    accent-color: #4ade80;
+    cursor: pointer;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: #0f1729;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(74, 222, 128, 0.3);
+}
+
+.main-btn:active {
+    transform: translateY(0);
+}
+
+.history {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #2a3a5c;
+}
+
+.history h3 {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+#historyList {
+    list-style: none;
+    font-family: "Consolas", monospace;
+    font-size: 13px;
+}
+
+#historyList li {
+    padding: 6px 10px;
+    background: #0f1729;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    color: #b0b8d0;
+    cursor: pointer;
+    transition: background 0.15s;
+    word-break: break-all;
+}
+
+#historyList li:hover {
+    background: #1a2740;
+    color: #4ade80;
+}

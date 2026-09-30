@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Генератор паролей</h1>
+
+        <div class="password-box">
+            <input type="text" id="password" readonly value="Нажми «Сгенерировать»">
+            <button id="copyBtn" title="Скопировать">📋</button>
+        </div>
+
+        <div class="strength-bar">
+            <div id="strengthFill"></div>
+        </div>
+        <p id="strengthText">—</p>
+
+        <div class="settings">
+            <label>
+                Длина пароля: <span id="lengthValue">16</span>
+                <input type="range" id="length" min="4" max="64" value="16">
+            </label>
+
+            <div class="checkboxes">
+                <label><input type="checkbox" id="useUpper" checked> Заглавные (A-Z)</label>
+                <label><input type="checkbox" id="useLower" checked> Строчные (a-z)</label>
+                <label><input type="checkbox" id="useDigits" checked> Цифры (0-9)</label>
+                <label><input type="checkbox" id="useSymbols" checked> Символы (!@#$)</label>
+            </div>
+        </div>
+
+        <button id="generateBtn" class="main-btn">Сгенерировать</button>
+
+        <div class="history">
+            <h3>История (последние 5)</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
